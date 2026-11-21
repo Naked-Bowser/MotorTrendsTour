@@ -49,13 +49,36 @@ public class MotorTrends{
                         System.err.println(error.getMessage());
                         System.err.println(error.getStackTrace());
                 }
-		return new StringBuilder(build.toString());
+
+		//boolean b = Pattern.matches("\D+",build.toString());
+		return build;
 	}
 
 
 	public static void main(String[] args){
 		StringBuilder builder = new StringBuilder();
 		//retrieve arugments from user and builder url.
-		Prototype(builder);
+		String hierarcial = "Motorlog";
+		String data = Prototype(builder).toString();
+		File file = new Files();
+		file.createDirectory(hierarcial);//Error handling and exception
+
+		//print Prompt
+		System.out.println(data);
+		System.out.println("Length:\n");
+		System.out.println(data.length());
+
 	}
 }//end class
+
+/*
+ * The regular express will search for a set of 
+ * hierarchy httpClient response string.
+ * Taking into consideration the number of characters and length. Procced to create the FILE with the 	import java.nio.FILE class to invoke its instance methods and observe
+ * it's possible class constants. 
+ *
+ * Check first if the file does exist or not then begin to create the FILE Conditionally.
+ * Creates empty file. Ignoring service providers figure if the BODYHANDLERS
+ * capture http response from the client as searlized stream of btyes.
+ * Not from the response invoke string instance methods??
+ * */
